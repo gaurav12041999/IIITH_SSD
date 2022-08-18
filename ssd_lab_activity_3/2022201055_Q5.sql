@@ -1,0 +1,1 @@
+SELECT D.Mgr_ssn, D.Dname, COUNT(DP.Dependent_name) AS NO_of_dependents FROM DEPARTMENT AD D, DEPENDENT AS DP WHERE (D.Mgr_ssn=DP.Essn) AND D.Dnumber IN (SELECT DL.Dnumber FROM DEPT_LOCATIONS AD DL WHERE GROUP BY DL.Dnumber HAVING COUNT(DL.Dlocation) > 1) GROUP BY DP.Essn; 

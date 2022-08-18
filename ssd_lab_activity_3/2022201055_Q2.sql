@@ -1,0 +1,1 @@
+SELECT CONCAT(E2.Fname, E2.Minit, E2.Lname) AS Full_name, E2.Ssn, D.Dnumber, COUNT(E2.Ssn) AS Number_of_employees FROM EMPLOYEE AS E1, EMPLOYEE AS E2, DEPARTMENT AS D WHERE (E1.Super_ssn=E2.Ssn) AND (E2.Dno=D.Dnumber) GROUP BY E2.Ssn ORDER BY Number_of_employees;

@@ -1,0 +1,1 @@
+SELECT CONCAT(E.Fname, E.Minit, E.Lname)  AS Full_Name, E.Ssn, D.Dnumber, D.Dname  FROM EMPLOYEE AS E, DEPARTMENT AS D WHERE (E.Dno=D.Dnumber) AND E.Ssn IN (SELECT E.Super_ssn FROM EMPLOYEE AS E, WORKS_ON AS W WHERE (E.Ssn=W.Essn) AND (W.Hours < 40));

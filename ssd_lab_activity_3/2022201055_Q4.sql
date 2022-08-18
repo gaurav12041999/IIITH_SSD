@@ -1,0 +1,1 @@
+SELECT D.Dnumber, D.Dname, COUNT(DL.Dlocation) AS Number_of_locations FROM DEPT_LOCATIONS AS DL, DEPARTMENT AS D WHERE (DL.Dnumber=D.Dnumber) AND  D.Mgr_ssn IN(SELECT DP.Essn FROM DEPENDENT AS DP WHERE DP.Sex='F' GROUP BY DP.Essn HAVING COUNT(DP.Essn) > 1) GROUP BY DL.Dnumber;
