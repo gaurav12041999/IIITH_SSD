@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(139, 139, 123);
+}
+.head1{
+    text-align: center;
+    margin: auto;
+}
+.login
+{
+    margin: auto;
+    text-align: center;
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 50px;
+    background-color:rgb(226, 235, 232);
+    box-shadow: 5px 5px ;
+}
